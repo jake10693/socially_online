@@ -203,7 +203,7 @@
             "Fun is not what to do..
         </b></p>
     <p><b class="hide">
-            It's who you do it with!""
+            It's who you do it with!"
         </b></p>
     <!-- COLORS FRAME ENDS HERE -->
 
@@ -283,7 +283,75 @@
         </div>
 
     </div>
-
+    <br>
+    <footer>
+<p class="full-center">
+    <b>
+        App Launching Fall 2022
+    <br>
+    <br>
+    Sign up now for $1 to receive updates on launch dates & first 3 months premium membership
+</b>
+</p>
+<br>
+    </footer>
+    <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>
+        <div class="mainDiv" >
+        
+    
+            <a href="https://www.instagram.com/sociallyonline/" >
+            <i class="fab fa-instagram fa-2x"> </i>
+            </a>
+               
+           
+               </div>
+      </div>
+      <script src="https://kit.fontawesome.com/059fa98d93.js" 
+         crossorigin="anonymous"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'pill',
+            color: 'gold',
+            layout: 'horizontal',
+            label: 'paypal',
+  
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"description":"Donate $1 to:\nSign Up For Release Notifications\nGet Free 3 Month Premium Membership","amount":{"currency_code":"USD","value":1}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+  
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+  
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
 </body>
 
 </html>
