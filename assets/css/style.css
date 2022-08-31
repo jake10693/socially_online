@@ -1,0 +1,174 @@
+body {
+    margin: auto;
+    width: 1540px; 
+    padding: 200px;
+    font-family: 'Avenir', sans-serif; 
+    color: #33475b;    
+  }
+
+  
+  /* Centered Image Code */
+  
+  .image1 {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p, b, h1, h2, h3, h4, h5, h6, div{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+div > div{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  #frame-3-hide, #frame-4-hide{
+    display:none;
+  }
+  /* #hovershow3:hover + #frame-3-hide, #frame-3-hide:hover{
+      display:block;    
+  }
+  #hovershow4:hover  {
+transform: scale(1.1);
+  } */
+
+  div.a {
+    width: 150px;
+    height: 60px;
+    background-color: red;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.b {
+    width: 150px;
+    height: 60px;
+    background-color: green;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.c {
+    width: 150px;
+    height: 60px;
+    background-color: blue;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.d {
+    width: 150px;
+    height: 60px;
+    background-color: orange;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.e {
+    width: 150px;
+    height: 60px;
+    background-color: yellow;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.f {
+    width: 150px;
+    height: 60px;
+    background-color: purple;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.g {
+    width: 150px;
+    height: 60px;
+    background-color: gray;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+  div.h {
+    width: 150px;
+    height: 60px;
+    background-color: brown;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(-600deg);
+  }
+
+
+
+
+
+  
+  /* Parent Container */.content_img{
+    position: relative;
+    width: 250px;
+    height: 400px;
+    /* float: left; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Child Text Container */.content_img div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  /* Hover on Parent Container */.content_img:hover{
+   cursor: pointer;
+  }
+  
+  .content_img:hover div{
+   width: 150px;
+   padding: 8px 15px;
+   visibility: visible;
+   opacity: 0.7; 
+   transform: rotate(600deg)
+  }
+
+  
+  /* Parent Container */.content_img2{
+    position: relative;
+    width: 250px;
+    height: 400px;
+    /* float: left; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Child Text Container */.content_img2 div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  /* Hover on Parent Container */.content_img2:hover{
+   cursor: pointer;
+  }
+  
+  .content_img2:hover div{
+   width: 150px;
+   padding: 8px 15px;
+   visibility: visible;
+   opacity: 0.7; 
+   transform: rotate(0deg)
+  }
+
+.image2, .image3 {
+    box-shadow: 10px 10px 5px darkgray;
+  }
